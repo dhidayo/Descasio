@@ -32,6 +32,7 @@ Open http://localhost:3000.
 | `SUPABASE_URL` | Supabase project URL (server only) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key (server only, never exposed to the browser) |
 | `WORDPRESS_API_URL` | WordPress REST API base, defaults to `https://descasio.io/wp-json/wp/v2` |
+| `ALLOW_INDEXING` | Set to `true` only on the live domain. Otherwise every page asks search engines not to index it. |
 
 Without Supabase variables the site still runs. The contact form then asks visitors to email hi@descasio.io, and the AI Readiness Assessment still shows results.
 

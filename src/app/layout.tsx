@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   description:
     "Africa's Intelligent Enterprise Platform. We build the cloud, automate the workflows, and transform the enterprise. Built in Nigeria. Owned end to end.",
   openGraph: { siteName: "Descasio", type: "website", locale: "en_GB" },
+  // Pages carry "noindex" until ALLOW_INDEXING=true is set on the live domain.
+  robots: process.env.ALLOW_INDEXING === "true" ? undefined : { index: false, follow: false },
 };
 
 export const viewport: Viewport = {
