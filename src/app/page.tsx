@@ -1,5 +1,6 @@
 import { Hero } from "@/components/home/Hero";
 import { Stats } from "@/components/home/Stats";
+import { DipFeature } from "@/components/home/DipFeature";
 import { LogoMarquee } from "@/components/home/LogoMarquee";
 import { Layers } from "@/components/home/Layers";
 import { WhyBento } from "@/components/home/WhyBento";
@@ -11,6 +12,7 @@ export default function Home() {
     <>
       <Hero />
       <Stats />
+      <DipFeature />
       <LogoMarquee />
       <Layers />
       <WhyBento />

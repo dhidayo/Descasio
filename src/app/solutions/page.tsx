@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CloudArrowUp, FlowArrow, Brain } from "@phosphor-icons/react/dist/ssr";
+import { CloudArrowUp, FlowArrow, Brain, ChartLineUp } from "@phosphor-icons/react/dist/ssr";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -13,6 +13,15 @@ export const metadata: Metadata = {
 };
 
 const layers = [
+  {
+    label: "Decision Intelligence",
+    icon: ChartLineUp,
+    title: "Decision Intelligence Platform (DIP)",
+    status: "Flagship",
+    body: "Turn fragmented data into decisions you can trust. DIP connects, governs, and monitors your critical data so every report, insight, and AI initiative is built on accuracy, traceability, and control.",
+    points: ["Connects to your existing systems without disruption", "Automated quality checks before data reaches reporting", "Complete lineage from source to insight", "Governed, AI-ready data leaders can act on"],
+    cta: { label: "Explore DIP", href: "/decision-intelligence-platform" },
+  },
   {
     label: "Infrastructure",
     icon: CloudArrowUp,
@@ -46,7 +55,7 @@ export default function Solutions() {
       <PageHero
         label="Solutions"
         title="Technology built to transform how African enterprises operate, scale, and win."
-        intro="Three integrated capability layers. One partner. From infrastructure through automation to advisory."
+        intro="Decision intelligence, infrastructure, automation, and advisory. One partner, from your data foundation to the decisions it supports."
       >
         <Button href={ctas.primary.href}>{ctas.primary.label}</Button>
       </PageHero>

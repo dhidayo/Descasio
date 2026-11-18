@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "motion/react";
-import { Certificate, UsersThree } from "@phosphor-icons/react";
+import Link from "next/link";
+import { ArrowRight, Certificate, UsersThree } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/Button";
 import { ctas } from "@/content/site";
 
@@ -36,9 +37,16 @@ export function Hero() {
       }}
     >
       <div>
-        <motion.p {...rise(0)} className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3.5 py-1.5 text-sm font-bold text-accent-strong dark:text-accent">
-          15 years of proven delivery
-        </motion.p>
+        <motion.div {...rise(0)}>
+          <Link
+            href="/decision-intelligence-platform"
+            className="glass group inline-flex items-center gap-2.5 rounded-full py-1.5 pl-1.5 pr-4 text-sm font-semibold text-fg transition-transform duration-300 hover:-translate-y-0.5"
+          >
+            <span className="rounded-full bg-accent-strong px-2.5 py-1 text-xs font-bold text-white">New</span>
+            Decision Intelligence Platform
+            <ArrowRight size={14} weight="bold" className="transition-transform group-hover:translate-x-0.5" />
+          </Link>
+        </motion.div>
         <motion.h1
           {...rise(0.08)}
           className="mt-6 text-balance text-[2.75rem] font-extrabold leading-[1.02] tracking-[-0.04em] text-fg sm:text-6xl lg:text-[4.6rem]"

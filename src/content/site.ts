@@ -37,8 +37,11 @@ export const nav: (NavLink | NavGroup)[] = [
         ],
       },
       {
-        title: "Automation",
-        links: [{ label: "PlugIQ Workflow Automation", href: "/plugiq", description: "Approvals live in days" }],
+        title: "Platforms",
+        links: [
+          { label: "Decision Intelligence Platform", href: "/decision-intelligence-platform", description: "Decisions you can trust" },
+          { label: "PlugIQ Workflow Automation", href: "/plugiq", description: "Approvals live in days" },
+        ],
       },
       {
         title: "Advisory",
@@ -51,7 +54,7 @@ export const nav: (NavLink | NavGroup)[] = [
       },
     ],
   },
-  { label: "PlugIQ", href: "/plugiq" },
+  { label: "Decision Intelligence", href: "/decision-intelligence-platform" },
   {
     label: "Resources",
     groups: [
@@ -116,9 +119,9 @@ export const layers = [
   },
   {
     n: "03",
-    title: "PlugIQ: Intelligent Workflow Automation",
-    body: "Our no-code platform that turns manual approvals, requisitions, and operations into automated, auditable workflows. Live in days, not months.",
-    cta: { label: "See PlugIQ", href: "/plugiq" },
+    title: "Our Platforms: DIP and PlugIQ",
+    body: "Our Decision Intelligence Platform turns fragmented data into decisions you can trust. PlugIQ turns manual approvals into automated, auditable workflows. Built and owned by us.",
+    cta: { label: "Explore DIP", href: "/decision-intelligence-platform" },
     icon: "flow",
   },
 ] as const;
@@ -130,8 +133,8 @@ export const differentiators = [
     icon: "buildings",
   },
   {
-    title: "We built the automation layer",
-    body: "PlugIQ is our product, not a white-labelled vendor tool. When something breaks, we fix it. When you need a feature, we build it.",
+    title: "We build our own platforms",
+    body: "DIP and PlugIQ are our products, not white-labelled vendor tools. When something breaks, we fix it. When you need a feature, we build it.",
     icon: "lightning",
   },
   {

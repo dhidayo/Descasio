@@ -6,6 +6,7 @@ const columns = [
   {
     title: "Solutions",
     links: [
+      ["Decision Intelligence Platform", "/decision-intelligence-platform"],
       ["Sovereign AI Cloud", "/sovereign-cloud"],
       ["Cloud Migration", "/cloud-migration"],
       ["Cybersecurity & Compliance", "/cybersecurity"],

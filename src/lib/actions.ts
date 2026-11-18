@@ -6,7 +6,7 @@ import { questions, score } from "@/content/assessment";
 
 export type FormState = { ok: boolean; message: string; errors?: Record<string, string> } | null;
 
-const topics = ["general", "cloud", "ai-advisory", "plugiq", "partnership"] as const;
+const topics = ["general", "dip", "cloud", "ai-advisory", "plugiq", "partnership"] as const;
 
 const contactSchema = z.object({
   first_name: z.string().trim().min(1, "Enter your first name").max(100),

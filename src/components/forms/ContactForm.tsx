@@ -7,6 +7,7 @@ import { Honeypot, Input, Select, SubmitButton, Textarea } from "./Field";
 
 const topicOptions = [
   ["general", "General Inquiry"],
+  ["dip", "Decision Intelligence Platform (DIP)"],
   ["cloud", "Cloud Services"],
   ["ai-advisory", "AI Advisory"],
   ["plugiq", "PlugIQ Demo"],
