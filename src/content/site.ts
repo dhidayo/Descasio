@@ -61,11 +61,11 @@ export const nav: (NavLink | NavGroup)[] = [
       {
         title: "Resources",
         links: [
-          { label: "Blog", href: "/blog" },
-          { label: "Whitepapers & Guides", href: "/whitepapers" },
-          { label: "Case Studies", href: "/case-studies" },
-          { label: "Events", href: "/events" },
-          { label: "Press", href: "/press" },
+          { label: "Blog", href: "/blog", description: "Insights on cloud, AI, and data" },
+          { label: "Whitepapers & Guides", href: "/whitepapers", description: "In-depth guides, free to download" },
+          { label: "Case Studies", href: "/case-studies", description: "Real outcomes for real enterprises" },
+          { label: "Events", href: "/events", description: "The Trust Layer and more" },
+          { label: "Press", href: "/press", description: "News and media coverage" },
         ],
       },
     ],
@@ -76,10 +76,10 @@ export const nav: (NavLink | NavGroup)[] = [
       {
         title: "Company",
         links: [
-          { label: "About Us", href: "/about" },
-          { label: "Partners", href: "/partners" },
-          { label: "Careers", href: "/careers" },
-          { label: "Contact", href: "/contact" },
+          { label: "About Us", href: "/about", description: "15 years of building infrastructure" },
+          { label: "Partners", href: "/partners", description: "AWS, Google, and security alliances" },
+          { label: "Careers", href: "/careers", description: "Join our team of 70+ specialists" },
+          { label: "Contact", href: "/contact", description: "Talk to our team" },
         ],
       },
     ],
