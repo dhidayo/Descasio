@@ -87,7 +87,7 @@ export function Nav() {
         {(open || mobile) && (
           <motion.div
             aria-hidden
-            className="fixed inset-0 -z-10 bg-[rgb(10_18_32/0.22)] backdrop-blur-[2px] dark:bg-[rgb(0_0_0/0.45)]"
+            className="fixed inset-0 -z-20 bg-[rgb(10_18_32/0.12)] backdrop-blur-[3px] dark:bg-[rgb(0_0_0/0.3)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -102,10 +102,14 @@ export function Nav() {
 
       <nav
         aria-label="Main"
-        className={`relative mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full pl-5 pr-2 transition-[background,box-shadow,border-color] duration-500 ${
-          solid ? "glass-nav" : "border border-transparent"
-        }`}
+        className="relative mx-auto flex h-16 max-w-6xl items-center justify-between rounded-full pl-5 pr-2"
       >
+        {/* The bar's frosted layer sits beside the menus, not around them. A blurred ancestor would stop
+            the dropdowns from blurring the page beneath (Chrome's "backdrop root" rule). */}
+        <span
+          aria-hidden
+          className={`pointer-events-none absolute inset-0 -z-10 rounded-full transition-opacity duration-500 glass-nav ${solid ? "opacity-100" : "opacity-0"}`}
+        />
         <Link href="/" aria-label="Descasio home" className="shrink-0">
           <Logo className="h-[26px] w-auto" />
         </Link>

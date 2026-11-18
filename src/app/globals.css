@@ -25,7 +25,7 @@
   --glass-edge: rgb(14 26 43 / 0.06);
   --glass-shadow: 0 1px 0 rgb(255 255 255 / 0.9) inset, 0 20px 50px -24px rgb(30 45 80 / 0.28);
 
-  --menu-bg: rgb(255 255 255 / 0.985);
+  --menu-bg: rgb(255 255 255 / 0.72);
   --menu-shadow: 0 1px 0 rgb(255 255 255 / 0.9) inset, 0 30px 80px -20px rgb(20 35 70 / 0.35), 0 8px 24px -12px rgb(20 35 70 / 0.18);
   --nav-bg: rgb(255 255 255 / 0.93);
 
@@ -51,7 +51,7 @@
   --glass-edge: rgb(0 0 0 / 0.2);
   --glass-shadow: 0 1px 0 rgb(255 255 255 / 0.1) inset, 0 24px 60px -24px rgb(0 0 0 / 0.6);
 
-  --menu-bg: rgb(17 28 47 / 0.985);
+  --menu-bg: rgb(17 28 47 / 0.74);
   --menu-shadow: 0 1px 0 rgb(255 255 255 / 0.08) inset, 0 30px 80px -20px rgb(0 0 0 / 0.7), 0 8px 24px -12px rgb(0 0 0 / 0.5);
   --nav-bg: rgb(13 22 38 / 0.92);
 
@@ -110,7 +110,6 @@ html.lenis body {
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow), 0 0 0 1px var(--glass-edge);
   backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
 }
 
 /* Menus: near-opaque frosted surface, so page content never shows through the links */
@@ -118,8 +117,8 @@ html.lenis body {
   background: var(--menu-bg);
   border: 1px solid var(--line);
   box-shadow: var(--menu-shadow);
-  backdrop-filter: blur(28px) saturate(180%);
-  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  /* Strong blur: the page stays visible as colour and light, but nothing behind the links is readable */
+  backdrop-filter: blur(40px) saturate(190%);
 }
 
 /* The navigation bar once the page scrolls */
@@ -128,7 +127,6 @@ html.lenis body {
   border: 1px solid var(--line);
   box-shadow: 0 10px 40px -18px rgb(20 35 70 / 0.35);
   backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
 @media (prefers-reduced-transparency: reduce) {
@@ -136,12 +134,10 @@ html.lenis body {
   .glass-nav {
     background: var(--bg-elevated);
     backdrop-filter: none;
-    -webkit-backdrop-filter: none;
   }
   .glass {
     background: var(--bg-elevated);
     backdrop-filter: none;
-    -webkit-backdrop-filter: none;
   }
 }
 
