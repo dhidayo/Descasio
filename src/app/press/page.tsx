@@ -26,8 +26,8 @@ export default function Press() {
       <section className="mx-auto grid max-w-6xl gap-10 px-4 py-8 lg:grid-cols-[1.3fr_0.7fr]">
         <ol className="relative border-l-2 border-line pl-8">
           {items.map((it, i) => (
-            <Reveal key={it.title} delay={i * 0.04}>
-              <li className="relative pb-10 last:pb-0">
+            <Reveal key={it.title} delay={i * 0.04} className="pb-10 last:pb-0">
+              <li className="relative">
                 <span aria-hidden className="absolute -left-[41px] top-1.5 size-4 rounded-full border-4 border-[var(--bg)] bg-accent" />
                 <p className="text-sm font-bold text-accent-strong dark:text-accent">{it.date}</p>
                 <a href={it.href} target="_blank" rel="noopener noreferrer" className="group mt-2 inline-flex items-start gap-2 text-xl font-bold leading-snug text-fg">

@@ -1,0 +1,17 @@
+{
+  "name": "descasio-wordpress-build",
+  "private": true,
+  "description": "Builds the CSS and vendor assets for the Descasio WordPress theme and elements plugin.",
+  "scripts": {
+    "build:css": "tailwindcss -i build/descasio.css -o descasio-theme/assets/css/descasio.css --minify",
+    "watch:css": "tailwindcss -i build/descasio.css -o descasio-theme/assets/css/descasio.css --watch",
+    "build:vendor": "node build/copy-vendor.mjs",
+    "build": "npm run build:vendor && npm run build:css"
+  },
+  "devDependencies": {
+    "@phosphor-icons/web": "^2.1.2",
+    "@tailwindcss/cli": "^4.3.5",
+    "lenis": "^1.3.27",
+    "tailwindcss": "^4.3.5"
+  }
+}
